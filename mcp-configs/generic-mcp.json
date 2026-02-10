@@ -1,16 +1,13 @@
 {
   "mcpServers": {
     "beaunifi": {
-      "command": "uv",
+      "command": "E:\\Projects\\OSP\\beaunifi\\.venv\\Scripts\\python.exe",
       "args": [
-        "run",
-        "--python",
-        "python",
         "-m",
         "beaunifi.server"
       ],
       "cwd": "E:\\Projects\\OSP\\beaunifi",
-      "description": "Smart beautify/minify server for JS and CSS with auto-detection",
+      "description": "Smart beautify/minify server for JS and CSS with auto-detection. Use this when you need to read or edit minified JavaScript or CSS files. The server can detect if code is minified, beautify it for easier editing, and re-minify it when done. Workflow: 1) Use smart_process with action='read' to beautify minified code, 2) Edit the beautified code, 3) Use smart_process with action='write' to re-minify for production.",
       "env": {
         "PYTHONIOENCODING": "utf-8"
       }

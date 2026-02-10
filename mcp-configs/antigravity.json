@@ -1,14 +1,11 @@
 {
   "name": "beaunifi",
   "display_name": "Beaunifi",
-  "description": "Smart beautify/minify server for JS and CSS with auto-detection",
+  "description": "Smart beautify/minify server for JS and CSS with auto-detection. Use this when you need to read or edit minified JavaScript or CSS files. The server can detect if code is minified, beautify it for easier editing, and re-minify it when done. Workflow: 1) Use smart_process with action='read' to beautify minified code, 2) Edit the beautified code, 3) Use smart_process with action='write' to re-minify for production.",
   "transport": {
     "type": "stdio",
-    "command": "uv",
+    "command": "E:\\Projects\\OSP\\beaunifi\\.venv\\Scripts\\python.exe",
     "args": [
-      "run",
-      "--python",
-      "python",
       "-m",
       "beaunifi.server"
     ],
@@ -20,27 +17,27 @@
   "tools": [
     {
       "name": "beautify_js",
-      "description": "Beautify JavaScript code to make it readable"
+      "description": "Beautify JavaScript code to make it readable. Use when you receive minified JS that needs editing."
     },
     {
       "name": "minify_js",
-      "description": "Minify JavaScript code for production"
+      "description": "Minify JavaScript code for production. Use after editing to compress the code back."
     },
     {
       "name": "beautify_css",
-      "description": "Beautify CSS code to make it readable"
+      "description": "Beautify CSS code to make it readable. Use when you receive minified CSS that needs editing."
     },
     {
       "name": "minify_css",
-      "description": "Minify CSS code for production"
+      "description": "Minify CSS code for production. Use after editing to compress the code back."
     },
     {
       "name": "is_minified",
-      "description": "Check if code appears to be minified"
+      "description": "Check if code appears to be minified. Use to detect whether beautification is needed before editing."
     },
     {
       "name": "smart_process",
-      "description": "Smart workflow: auto-detect, beautify if needed, process, re-minify"
+      "description": "Smart workflow: auto-detect if code is minified, beautify if needed, apply modifications, and re-minify. Use action='read' to beautify for editing, action='edit' to apply changes while keeping beautified format, action='write' to re-minify for production."
     }
   ]
 }
