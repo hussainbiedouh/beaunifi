@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "beaunifi": {
+      "name": "Beaunifi",
+      "description": "Smart beautify/minify server for JS and CSS with auto-detection",
+      "command": "uv",
+      "args": [
+        "run",
+        "--python",
+        "python",
+        "-m",
+        "beaunifi.server"
+      ],
+      "cwd": "E:\\Projects\\OSP\\beaunifi",
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

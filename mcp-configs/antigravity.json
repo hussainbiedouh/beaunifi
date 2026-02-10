@@ -1,0 +1,46 @@
+{
+  "name": "beaunifi",
+  "display_name": "Beaunifi",
+  "description": "Smart beautify/minify server for JS and CSS with auto-detection",
+  "transport": {
+    "type": "stdio",
+    "command": "uv",
+    "args": [
+      "run",
+      "--python",
+      "python",
+      "-m",
+      "beaunifi.server"
+    ],
+    "cwd": "E:\\Projects\\OSP\\beaunifi",
+    "env": {
+      "PYTHONIOENCODING": "utf-8"
+    }
+  },
+  "tools": [
+    {
+      "name": "beautify_js",
+      "description": "Beautify JavaScript code to make it readable"
+    },
+    {
+      "name": "minify_js",
+      "description": "Minify JavaScript code for production"
+    },
+    {
+      "name": "beautify_css",
+      "description": "Beautify CSS code to make it readable"
+    },
+    {
+      "name": "minify_css",
+      "description": "Minify CSS code for production"
+    },
+    {
+      "name": "is_minified",
+      "description": "Check if code appears to be minified"
+    },
+    {
+      "name": "smart_process",
+      "description": "Smart workflow: auto-detect, beautify if needed, process, re-minify"
+    }
+  ]
+}
